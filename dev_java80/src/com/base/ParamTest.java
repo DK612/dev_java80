@@ -1,5 +1,9 @@
 package com.base;
 
+class Param {
+	int ival; //전역변수는 초기화 생략가능
+}
+
 public class ParamTest {
 
 	public static void main(String[] args) {
