@@ -9,13 +9,13 @@ public class RandomGame1_2 {
 	int guess;
 	int judge;
 	
-	public int startGame(int n) {
+	public void startGame() {
 		
 		Random r = new Random();
-		this.solve = r.nextInt(n)+1;
-		System.out.println("이것은 1~" + n +  "사이의 수입니다.");
-		return n
-		
+		this.solve = r.nextInt(10);
+		System.out.println("이것은 1~10 사이의 수입니다.");
+		this.judge = this.repeat();
+		howYouAre(judge);
 	}
 	public int repeat() {
 		Scanner sc = new Scanner(System.in);
