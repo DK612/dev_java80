@@ -1,5 +1,7 @@
 package book.ch7;
 
+import com.vo.EmpVO;
+
 public class Array3 {
 
 	public static void main(String[] args) {
