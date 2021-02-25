@@ -15,7 +15,7 @@ public class CalView {
 	JTextArea	jt_area		= null;
 	JButton		numbers[] 	= null;
 	JButton		buttons[] 	= null;
-	String		btn_label[] = {"+", "-", "×", "÷", "7", "8", "9", "C", "4", "5", "6", "=", "1", "2", "3", "0"};
+	String		btn_label[] = {"종료", "AC", "C", "←", "+", "-", "×", "÷", "7", "8", "9", "=", "4", "5", "6", "0", "1", "2", "3", " "};
 	CalHandler	handler		= null;
 	
 	//생성자
@@ -25,7 +25,7 @@ public class CalView {
 		jf.setLayout(new BorderLayout());
 		jt_area = new JTextArea();
 		jp_center = new JPanel();
-		jp_center.setLayout(new GridLayout(4,4,3,3));
+		jp_center.setLayout(new GridLayout(5,4,3,3));
 		buttons = new JButton[btn_label.length];
 		handler = new CalHandler(this);
 		for(int i=0; i<btn_label.length; i++) {
@@ -44,7 +44,7 @@ public class CalView {
 		jf.add("Center", jt_area);
 		jf.add("South", jp_center);
 		jf.setTitle("계산기");
-		jf.setSize(200, 200);
+		jf.setSize(300, 250);
 		jf.setVisible(true);
 	}
 	

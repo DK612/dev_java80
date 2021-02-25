@@ -23,22 +23,37 @@ public class CalHandler implements ActionListener {
 		String cmd = e.getActionCommand();
 		
 		if(logic.isNum(cmd)) {
-			view.jt_area.setText(logic.makeNumStr(cmd));
+			view.jt_area.setText(logic.getString(cmd));
 			
 		} else if("+".equals(cmd)) {
-
+			logic.getOperation(cmd);
+			view.jt_area.setText(logic.getMemory());
 		} else if("-".equals(cmd)) {
-
+			logic.getOperation(cmd);
+			view.jt_area.setText(logic.getMemory());
 		} else if("×".equals(cmd)) {
-			
+			logic.getOperation(cmd);
+			view.jt_area.setText(logic.getMemory());
 		} else if("÷".equals(cmd)) {
+			logic.getOperation(cmd);	
+			view.jt_area.setText(logic.getMemory());
 
+		} else if("=".equals(cmd)) {
+			view.jt_area.setText(logic.operate());
+		} else if("←".equals(cmd)) {
+			logic.backspace();
+			view.jt_area.setText(logic.getString());
 		} else if("C".equals(cmd)) {
 			logic.clear();
 			view.jt_area.setText("");
+		} else if("AC".equals(cmd)) {
+			logic.init();
+			view.jt_area.setText("");
+		} else if("".equals(cmd)) {
 
-		} else if("=".equals(cmd)) {
-			view.jt_area.setText(logic.getResult());
+		} else if("종료".equals(cmd)) {
+			System.exit(0);
+
 		}
 	}
 
