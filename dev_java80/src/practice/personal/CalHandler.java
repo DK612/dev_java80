@@ -8,6 +8,7 @@ public class CalHandler implements ActionListener {
 	//선언부
 	CalView 	view	= null;
 	CalLogic 	logic	= null;
+	private String display = null;
 	
 	//생성자
 	CalHandler(CalView view) {
@@ -55,6 +56,14 @@ public class CalHandler implements ActionListener {
 			System.exit(0);
 
 		}
+	}
+
+	public String getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(String display) {
+		this.display = display;
 	}
 
 }
