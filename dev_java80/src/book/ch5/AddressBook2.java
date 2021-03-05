@@ -50,6 +50,7 @@ public class AddressBook2 implements ActionListener{
 	public void refresh() {
 		System.out.println("refresh 호출 성공");
 	}
+	
 	//화면처리부
 	public void initDisplay() {
 		jf = new JFrame();
